@@ -1,3 +1,4 @@
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SampleComponent } from './sample.component';
 import { NgModule } from '@angular/core';
@@ -27,7 +28,8 @@ import { ProductService } from './product.service';
     ChildComponent,
     Child1Component,
     Parent1Component,
-    SamplePipe
+    SamplePipe,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
