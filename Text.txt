@@ -1,0 +1,1311 @@
+Node js 
+    Node js is an open-source server side runtime environment built on 
+    Chrome's V8 Javascript engine.
+
+    It Provides an event driven, non-blocking (asynchronous) I/O and 
+    cross-platform runtime environment for building highly scalable 
+    server-side application using Javascript.
+
+    Node.js can be used to build different types of applications such
+    as command line applications, web-applications, real-time chat applications,
+    REST API server etc.,
+
+    Node.js was written and introduced by Ryan Dahl in 2009.
+
+    Advantages of Node.js :
+        1. Node.js is an open-source framework under MIT License.
+        (MIT - Massachusetts Institute of Technology)
+        2. uses Javascript to build entire server side application
+        3. Lightweight framework 
+        4. asynchronous by default. 
+        5. cross-platform framework that runs on windows, MAC or Linux.
+
+    Node.js comes with virtual environment called REPL (Node Shell).
+    Read - Eval - Print - Loop 
+
+    node 
+    .help 
+    tab keys 
+    CTRL + c
+
+    Modules 
+        Module in Node.js is a simple or complex functionality organized
+        in a single or multiple Javascript files which can be reused 
+        throughout the Node.js application.
+
+        Module Types : 
+            3 types 
+                1. Core Modules 
+                2. Local Modules
+                3. Third Party Modules 
+
+        Core Modules : 
+            http 
+            url
+            querystring
+            path 
+            fs 
+            util 
+
+        Import require() function from node.
+
+        var module = require('module_name');
+
+        var http = require('http');
+        var server = http.createServer(function(req,res){
+            // Code Here 
+        });
+
+        server.listen(4500);
+
+    NPM - Node Package Manager 
+
+        Node Package Manager is command line tool that installs,
+        updates or uninstalls Node.js packages in applications.
+
+        www.npmjs.com 
+
+        install : 
+         npm install package_name 
+
+        help 
+        npm help
+
+Typescript : 
+        
+Typescript is Typed Javascript.
+TypeScript adds types to Javascript to speed up the development by 
+catching errors before run the Javascript code.
+
+Typescript is an open-source programming language that build on top 
+of Javascript.
+
+TypeScript is a superset of Javascript.
+
+TypeScript files use the .ts extension rather than the .js extension
+
+TypeScript uses the Javascript syntaxes and adds additional syntaxes
+for supporting Types.
+
+Getting Started with Typescript: 
+
+- VS Code
+- Node JS 
+- Typescript Compiler 
+- Live Server 
+
+Install TypeScript Compiler : 
+    npm install -g typescript 
+
+    tsc --v 
+
+    ts-node 
+
+    npm install -g ts-node  // Linux or MAC OS
+
+What is a type in TypeScript ? 
+
+in TypeScript, a type is a convenient way to refer to the different
+properties and functions that a value has.
+
+A value is anything that we can assign to a variable
+
+Types in TypeScript : 
+    TypeScript inherits the built-in types from Javascript.
+    TypeScript types is categorized into : 
+        Primitive types
+            string 
+            number
+            boolean
+            null
+            undefined
+            symbol 
+        Object types
+            Functions
+            array 
+            classes 
+            object 
+
+    Type Annotation in TypeScript : 
+
+        TypeScript uses type Annotations to explicitly specify types 
+        for identifiers such as variables, functions, object;
+
+        syntax : 
+            let variableName : type 
+
+    Typescript Types : 
+        Tuple works like an array with some additional considerations.
+            The number of the elements in the tuple is fixed.
+
+            The Types of elements are known, and need not to be the same 
+            
+        let skill : [string,number] = ['Programming',5];
+        let bgColor : [number,number,number,number] = [0,255,255,0.5];
+    enum :
+        An enum is a group of named constant values. 
+        enumerated type 
+
+    To define enum : 
+        use the enum keyword followed by name of the enum 
+        define constant values for the enum 
+
+    any : 
+        we need to store a value in a variable but we dont know 
+        its type at the time of declaration then we can opt-out 
+        for any type.
+
+        The any type allows to assign a value of any type to 
+        a variable.
+
+    void type : 
+        void type denotes the absence of having any type at all.
+
+        Typically, we use the void types as the return type of 
+        functions that do not return a value.
+
+
+    never type : 
+        The never type is a type that contains no values. 
+        Because of this, we cannot assign any value to 
+        a variable with a never type.
+    
+    union type : 
+        A union type describes a value that can be one of the 
+        several types, not just two.
+
+    Type Aliases
+        type Aliases allow you to create a new name for 
+        an existing type.
+
+        type alias = existingType;
+
+
+    Class : 
+        Syntax same as ES6 classes 
+        class name {
+            constructor(parameters) {
+                
+            }
+        }
+
+    Access Modifiers: 
+        Access Modifiers Change the Visibility of the 
+        properties and methods of a class.
+        Typescript provides 2 Access Modifiers: 
+            private
+            protected 
+            public 
+
+        private Modifier limits the Visibility to the 
+        same class only.when we add the private Modifier
+        to a property or method, we can access that 
+        property or method within the same class.
+
+        Any Attempt to access private properties or 
+        methods outside the class will result in an 
+        error at compile time.
+    
+        public Modifier allows class properties and methods
+        to be accessible from all locations. if we dont
+        specify any access Modifier for properties and 
+        methods, they will take the public Modifier by 
+        default.
+
+        protected  Modifier allows properties and methods
+        of a class to be accessible with in same class
+        and within subclasses.
+
+        when a class(child class) inherits from another
+        class(parent class), it is a subclass of the 
+        parent class.
+
+    readonly Modifier : 
+        TypeScript provides the readonly Modifier that 
+        allows us to mark the properties of a class 
+        immutable.
+
+        The Assignment to a readonly property can only 
+        occur in one of the two places:
+            in the property declaration
+            in the constructor of the same class 
+        
+    abstract classes :
+
+        An abstract class is Typically used to define common behaviours
+        for derived classes to extend.
+
+        Unlike a regular class, an abstract class cannot be instantiated
+        directly.
+
+        To declare an abstract class, we use abstract keyword :     
+            abstract class Employee {
+                //..
+            }
+
+        An abstract class contains one or more abstract methods.
+
+        An abstract method does not contain implementation. it only defines
+        the signature of the method without including the method body.
+
+        An abstract method must be implemented in the derived class.
+---------------------------------------------------------------------------
+abstract class Employee{
+    constructor(private firstName : string, private lastName : string){}
+
+    abstract getSalary() : number
+
+    getfullName(): string{
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    compensationStatement() : string{
+        return `${this.getfullName()} makes ${this.getSalary()} a month`;
+    }
+
+}
+
+//let employee = new Employee('Krishna','Mohan'); will not work for abstract class
+
+class FullTimeEmployee extends Employee{
+    constructor(firstName : string,lastName : string, private salary : number){
+        super(firstName,lastName);
+    }
+
+    getSalary(): number {
+        return this.salary
+     }
+}
+
+let emp1 = new FullTimeEmployee('Krishna','Mohan',20000);
+
+console.log(emp1.compensationStatement());
+-------------------------------------------------------------
+
+    Interfaces 
+
+    Typescript interfaces define the contracts within the code. 
+    They also provide explicit names for the type checking.
+interface Person{
+    firstName : string;
+    lastName : string;
+}
+
+function getFullName(person : Person){
+    return `${person.firstName} ${person.lastName}`;
+}
+
+let emp1 : Person = {
+    firstName : 'Krishna',
+    lastName : 'Mohan'
+};
+
+console.log(getFullName(emp1));
+-------------------
+    Optional Parameters 
+
+    An Interface may have Optional properties. To declare an Optional
+    property, we use the question mark (?) at the end of the property
+    name in the declaration
+
+    readonly Parameters 
+
+    we can have readonly properties in the interface by using readonly 
+    keyword to the staring of the property name 
+------------------------------
+interface Json{
+    toJSON() : string
+}
+
+class Person implements Json{
+    constructor(private firstName : string){
+    }
+
+    toJSON(): string {
+        return JSON.stringify(this.firstName);
+    }
+}
+
+let emp1 = new Person("Krishna");
+
+console.log(emp1);
+console.log(emp1.toJSON());
+--------------------------
+    An interface can extend one or multiple existing Interfaces.
+
+    An interface also can extend a class. if the class contains
+    private or protected members, the interface can only be 
+    implemented by the class or subclasses of that class.
+    
+Advanced Types
+
+    Intersection types : 
+
+    An intersection type creates a new type by combining multiple 
+    existing types.
+    The new type has all features of the existing types.
+
+    To Combine types, we use & operator 
+
+    type typeAB = typeA & typeB;
+
+
+    Type Guards : 
+
+    Type Gaurds allow to narrow down the type of variable within a 
+    conditional block.
+        typeof
+        instanceof 
+        in 
+            in operator carries a safe check for the existance of 
+            a property on an object.
+
+    Type casting : 
+        Javascript does not have a concept of type casting Because 
+        variables have dynamic types. 
+
+        Type casting allow to convert a variable from one type to 
+        another.
+
+        we can use the as keyword or <> operator for type castings
+
+Typescript  Generics 
+    allows to write the reusable and generalised form of functions, classes
+    and Interfaces.
+
+
+Session 33 : 
+    Typescript 
+     Typed Javascript 
+    
+        Typescript is super set of Javascript.
+
+        We need to compile the Typescript code into plain Javascript code using a Typescript compliler. 
+
+        tsc  - TypeScriptCompiler 
+        .ts  - extension 
+
+    
+    Node Js 
+    Typescript Compiler  -> npm install -g typescript 
+        tsc --v
+        or 
+        npm install -g ts-node
+        ts-node 
+    VisualStudio code
+    Live Server 
+
+Why use Typescript ?
+    2 main reasons 
+        - Typescript adds a type system to help avoid problems with dynamic types in Javascript
+        - Typescript implements the future features of Javascript : ES Next 
+
+Typescript Types : 
+
+    Primitive types 
+    Object types 
+
+    Primitive Types : 
+        string 
+        number
+        boolean 
+        null
+        undefined
+        symbol 
+        bigint 
+
+    Object Types : 
+        functions 
+        arrays 
+        classes 
+        Tuple 
+            - number of elements in the tuple are fixed
+            - types of elements are known, need not be the same 
+
+
+    : type 
+
+06:30 AM to 07:30 AM 
+let message : string = "Hello, TypeScript";
+let age : number = 10;
+let active : boolean = true;
+let arrayName : string[] = ['a','b','c'];
+let numbers : any[] = [1,2,3,4, null, 'a','b'];
+let obj : object = {
+    name : "Krishna", age : 23
+};
+
+let person : {
+    firstName : string;
+    lastName : string;
+    age : number;
+};
+
+person = {
+    firstName : 'Krishna',
+    lastName : 'Mohan',
+    age : 34
+}
+
+let emp : {} = {a : 1}
+
+let skill : [string, number] = ['Sample Text', 200];
+
+enum Month {
+    Jan,
+    Feb,
+    Mar,
+    Apr,
+    May,
+    Jun,
+    Jul,
+    Aug,
+    Sep,
+    Oct,
+    Nov,
+    Dec
+};
+
+function isItSummer(month : Month){
+    let isSummer : boolean;
+
+    switch(month){
+        case Month.Jun:
+        case Month.Jul:
+        case Month.Aug: 
+            isSummer = true;
+            break;
+        default : 
+            isSummer = false;
+            break;
+    }
+    return isSummer;
+}
+
+console.log(message);
+
+Session 34 : 
+    enum - is a group of named constant values. 
+            enumerated type 
+            enum name {constant1, constant2,...};
+
+    any type - typescript assumes any if not mentioned the type : type inference : any type
+
+    void type - denotes the absence of having any type at all.
+                we use the void type as return type of functions that do not retunr a value 
+    function log(message) : void{
+    console.log(message);
+    }
+
+    never type : type contains no values 
+
+    function raiseError(message : string) : never{
+    throw new Error(message);
+        }
+
+        function reject(){
+            return raiseError('Rejected');
+        }
+
+     Union type : 
+
+function add(a : number | string, b : number | string){
+if(typeof a === 'number' && typeof b === 'number'){
+return a + b;
+}
+if(typeof a === 'string' && typeof b === 'string'){
+return a.concat(b);
+}
+throw new Error('Parameters must be numbers or strings');
+}
+
+
+Type Aliases : 
+type alphanumeric = string | number | boolean;
+
+let input : alphanumeric;
+
+input = 100;
+input = 'Hello'
+
+input = true 
+-----------------------------
+String Literal Types : 
+
+let click : 'click' |'dblclick';
+
+click = 'click'
+----------------------------
+
+Control flow : 
+    As is of Javascript
+
+Functions : 
+    let add = (x : number, y : number) : number => x + y;
+
+Classes : 
+
+class Person {
+    ssn : number;
+    firstName : string;
+    lastName : string;
+
+    constructor(ssn :number, firstName : string, lastName : string){
+        this.ssn =ssn;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getFullName() : string{
+        return `${this.firstName}  ${this.lastName}`;
+    }
+}
+
+let person = new Person(12345,'Krishna','Mohan');
+
+---------------------------
+
+Access Modifiers : 
+    Change the Visibility of the properties and methods of a class. 
+
+    TypeScript Provides 3 Access Modifiers: 
+        private  - limited to the same class only
+        protected - accessible to class and with in sub classes 
+        public - accessible from all locations 
+
+readonly Modifier : 
+    allows to mark the properties of a class immutable 
+
+class Person {
+    private ssn : number;
+    private firstName : string;
+    private lastName : string;
+   // readonly birthDate : Date;
+
+    constructor(ssn :number, firstName : string, lastName : string, readonly birthDate : Date){
+        this.ssn =ssn;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+    }
+
+    getFullName() : string{
+        return `${this.firstName}  ${this.lastName}`;
+    }
+}
+
+let person = new Person(12345,'Krishna','Mohan', new Date(1991,12,25));
+------------------------------------
+    Inheritance 
+-----------------------------------
+    getters and setters 
+----------------------------------
+    static methods and properties 
+----------------------------------
+    abstract classes  
+
+        Define the common behaviours for derived classes to extend 
+abstract class Employee {
+    
+}
+
+-------------------------------------
+Interfaces
+
+interface Person{
+    dob?: any;
+    firstName : string;
+    readonly lastName : string;
+}
+
+function getFullName(person : Person){
+   // person.lastName = "Hello";
+    return `${person.firstName} ${person.lastName} ${person.dob}`;
+}
+
+let std = {
+    firstName : 'Krishna',
+    lastName : 'Mohan',
+    
+};
+
+console.log(getFullName(std));
+
+interface Json{
+    toJSON() : string
+}
+
+class Person implements Json{
+    constructor(private firstName : string, private lastName : string){
+
+    }
+    toJSON(): string {
+        return JSON.stringify(this);
+    }
+}
+
+
+interface A {
+    a() : void
+}
+
+interface B extends A{
+    b() :void
+}
+
+-----------------------------
+
+intersection of types : 
+
+type typeAB = typeA & typeB 
+
+
+
+Session 35 : 
+    Type Gaurds 
+        allows to narrow down the type of a variable within a conditional block.
+        typeof
+        instanceof
+        in  - existance of a property in an object 
+
+        User-defined Type Gaurds 
+class Customer{
+    isCreditAllowed(): boolean{
+        return true;
+    }
+}
+
+class Supplier {
+    isInShortList() : boolean{
+        return true;
+    }
+}
+
+type BussinessPartner = Customer | Supplier;
+function isCustomer(partner : any) : partner is Customer{
+    return partner instanceof Customer;
+}
+
+function signContract(partner: BussinessPartner) : string{
+    let message : string;
+    if(isCustomer(partner)){
+        message = partner.isCreditAllowed() ? 'Sign in ' : 'credit issue';
+
+    }else{
+        message = partner.isInShortList() ? 'Sign a new contract' : 'Need to evaluate';
+    }
+    return message;
+}
+
+    Type Casting 
+         Allow to convert a variable from one type to another 
+         as or <> operators for type castings 
+         let a : typeA
+         let b = a as typeB 
+
+         let a : typeA;
+         let b = <typeB>a;
+
+    Type Assertions 
+        as 
+        expression as targetType 
+
+        instruct the Typescript Compiler to treet a value as a specified type 
+        type narrowing 
+        it allows to narrow a type from a union type.
+function getNetPrice(price : number, discount : number, format : boolean) : number | string {
+    let netPrice = price * (1 - discount);
+    return format ? `$${netPrice}` : netPrice;
+}
+
+//let netPrice = getNetPrice(100,0.05,true) as string;
+let netPrice = <string>getNetPrice(100,0.05,true);
+console.log(netPrice);
+
+function getRandomAnyElement(items : any[]) : any{
+    let randomIndex = Math.floor(Math.random() * items.length);
+    return items[randomIndex];
+}
+
+let numbers = [1,5,7,4,2,9];
+let colors = ['red','green','blue'];
+
+console.log(getRandomAnyElement(numbers));
+console.log(getRandomAnyElement(colors));
+
+
+Generics 
+     allow to write the reusable and generalised form of functions, classes and interfaces.
+    function getRandomElement<T>(items : T[]) : T{
+    let randomIndex = Math.floor(Math.random() * items.length);
+    return items[randomIndex];
+}
+
+let numbers = [1,5,7,4,2,9];
+let colors = ['red','green','blue'];
+
+console.log(getRandomElement<number>(numbers));
+console.log(getRandomElement<string>(colors));
+
+function merge<U,V>(obj1 : U, obj2 : V){
+    return {
+        ..obj1,
+        ..obj2
+    };
+}
+
+extends - constrain the type Parameter to a specific type 
+extends keyof - to constrain a type that is the property of another object 
+
+
+class className<T>{
+
+}
+
+
+interface interfaceName<T>{
+
+}
+
+Modules : ES6 
+    
+Angular
+
+npm install -g @angular/cli
+ng new my-app
+
+
+Angular 
+    AngularJS is a structural framework for dynamic web apps. It lets you use HTML 
+    as your template language and lets you extend HTML's syntax to express your 
+    application's components clearly and succinctly.
+
+    a library - a collection of functions which are useful when writing web apps. 
+    Your code is in charge and it calls into the library when it sees fit. 
+    E.g., jQuery.
+
+    frameworks - a particular implementation of a web application, where your code 
+    fills in the details. The framework is in charge and it calls into your code 
+    when it needs something app specific. E.g., durandal, ember, etc. 
+
+    Angular is a development platform, built on TypeScript. 
+    As a platform, Angular includes:
+
+    A component-based framework for building scalable web applications
+    A collection of well-integrated libraries that cover a wide variety of features, including 
+    routing, forms management, client-server communication, and more
+    A suite of developer tools to help you develop, build, test, and update your code
+
+    The Angular CLI is a command-line interface tool that you use to initialize, develop, scaffold, 
+    and maintain Angular applications directly from a command shell.
+
+    Install the CLI using the npm package manager:
+
+                            npm install -g @angular/cli
+
+                            ng v 
+
+                            ng new project-name 
+
+                            open the project in vscode
+
+                            ng serve 
+
+                            ng serve --open / ng serve -o
+
+                            ng s -o 
+
+Angular : 
+    Angular is a development platform for building a single page applications for mobile 
+    and desktop.
+    It uses TypeScript & HTML to build applications.
+
+    features : 
+        Components 
+        Directives
+        Forms 
+        Pipes
+        HTTP Services 
+        Dependency Injection .. etc
+
+        Two-way Data Binding 
+        Routing 
+        Built-in Back End Support to communicate Back-End Servers 
+        Angular Community - Google 
+
+        Angular is completely written in TypeScript and meets the ECMASCRIPT 6 specification 
+
+
+    Component : 
+        The Component is the main building block of an Angular Application.
+        The Component contains the data & user interaction logic that defines how the 
+        View looks and behaves. (A View refers to a template(HTML)).
+
+        The Angular Components are plain Javascript classes and defining using 
+        @Component Decorator.This Decorator provides the component with the 
+        view to display & Metadata about the Component.
+
+        The Components consists of 3 main building blocks : 
+            Template
+            Class 
+            Metadata
+
+        Template :  Template defines the layout and the content of the view. 
+        There are 2 ways we can specify the Template in Angular : 
+            1. Defining the Template Inline.
+            2. Provide an external Template.
+
+        Class : The Class Provides the data & logic to the View.
+        it contains the Javascript code associated with the Template (View).
+        We use TypeScript to create the class, but we can also use Javascript directly
+        in the class.
+
+        Class contains the properties and Methods. 
+        The properties of a class can be bind to the view using Data Binding .
+
+        Metadata : Metadata Provides additional information about the component to 
+        the Angular. 
+        We use @Component Decorator to provide the Metadata to the Component.
+
+        A Decorator is a function that adds Metadata to class, its methods and to 
+        it's properties.
+
+        @Component Decorator properties : 
+            Selector
+            Providers 
+            Directives
+            template / templateUrl
+            Styles / styleUrls
+
+            Selector : specifies the simple CSS Selector. The Angular looks for the CSS 
+            Selector in the template and renders the component there.
+
+            Providers : are Angular services that the component going to use.
+
+            Directives : that this component going to use are listed here =.
+        
+            Styles / styleUrls : we can use either external stylesheet using styleUrls
+            or inline styles using styles.
+
+    Data Binding:
+            Data Binding is a technique, where the data stays in sync between the 
+            component and the view. 
+
+            Whenver the user updates the data in the view, Angular updates the component.
+            When the component gets the new data, the Angular updates the view.
+
+            The data Binding in Angular can be broadly classified into 2 groups 
+                - One way Binding 
+                - Two way Binding
+
+            There are 4 types of Binding : 
+                Interpolation 
+                Property Binding 
+                Event Binding 
+
+                Two Way Binding
+            
+            Interpolation : allows to include expressions as part of any string literal ,
+            which we use in HTML.
+            The Angular uses {{}} (double curly braces) in the template to denote the 
+            Interpolation.
+            syntax : {{tempalte expression}}
+
+            Property Binding : allows to bind HTML element property to a property in the 
+            component.
+
+            We can set the properties such as classes, href, src, textContent, etc., using
+            property binding.
+
+            Syntax : [binding-target] = "binding-source"
+
+            Event Binding : allows to bind the events.
+
+            Syntax : (target-event) = "tempalteStatement"
+            
+            Two-way Data Binding : 
+                the changes made to the model in the component are propagated to the view 
+                and that changes made in the view are immediately updated in the 
+                component. 
+                Useful Forms
+                [(ngModel)] = "value"
+
+        Create a new Component : 
+            ng generate component comp_name 
+            ng g c comp_name 
+
+        Directives : 
+            The Angular Directives helps to manipulate the DOM. 
+            We can change the appearance, behaviour, or layout of a DOM 
+            element using the Directives.
+
+            Directives are classified into 3 categories : 
+                Component 
+                Structural Directives
+                Attribute Directives
+            
+            Components are special Directives in Angular. They are the 
+            Directive with a tempalte(view).
+
+            Structural Directives : 
+                Structural Directives can change the DOM layout by adding 
+                and removing DOM elements.
+                All Structural Directives are preceded by Asterik (*) 
+
+                Commonly used Structural Directives : 
+                    ngFor 
+                    ngSwitch 
+                    ngIf 
+                
+                ngIf : Directive is used to add or remove HTML elements
+                based on an expression.
+                The expression must return a boolean value.
+
+                ngFor : is an Angular structural Directive, which repeats
+                a portion of HTML tempalte once per each item from an 
+                iterable list (collection).
+
+                ngSwitch : directive lets us to add/remove HTML elements
+                depending on a match expression.
+                ngSwitch directive used along with ngSwitchCase and 
+                ngSwitchDefault
+
+            Attribute Directives 
+                An Attribute or style directive can change the appearance
+                or behaviour of an element.
+                
+                ngClass 
+                    is an Attribute directive which allows to add or remove 
+                    classes to an HTML element.
+
+                    <element [ngClass] ="expression">....</element>
+
+                    element - DOM element
+                    expression - evaluated and resulting the classes
+
+                ngStyle 
+                    allows us to set the many inline style of a HTML 
+                    element using an expression
+
+                    <element [ngStyle] = "{'styleNames':styleExp}">
+                    ...
+                    </element>
+
+        Component and Life Cycle Hooks : 
+            The Life Cycle Hooks are the methods that angular invokes 
+            on directives and components as it creates, changes and 
+            destroys them.
+
+            Using life-cycle hooks we can fine-tune the behaviour of 
+            components during creation,update and destruction.
+               
+                ngOnChanges 
+                ngOnInit
+                ngDoCheck
+                ngAfterContentInit
+                ngAfterContentChecked
+                ngAfterViewInit
+                ngAfterViewChecked
+                ngOnDestroy
+
+            Life Cycle of a Component begins, when angular creates 
+            the component class. First method that gets invoked is 
+            class constructor.
+
+            Constructor is neither a life cycle hook nor it is specific
+            to Angular. It is Javascript feature and a method which is
+            invoked when a class is created.
+
+            Angular makes use of a constructor to inject dependencies 
+
+            ngOnChanges: 
+                The Angular invokes ngOnChanges life cycle hook Whenver
+                any data-bound input property of the component or 
+                directive changes.
+
+                Initializing the input properties is the first task 
+                that the angular carries during the change detection 
+                cycle. if it detects any change in property, then it 
+                raises the ngOnChanges hook. it will be called on every
+                change detection cycle.
+
+            ngOnInit
+                ngOnInit invokes only once in the component immediately
+                after its creation.
+
+            ngDoCheck
+                ngDoCheck invokes in component during every change
+                detection cycle.
+
+            ngAfterContentInit
+                ngAfterContentInit invokes after the Component's projected
+                content has been fully initialized.
+
+            ngAfterContentChecked
+                invokes on every change detection cycle after angular
+                finishes checking of component's projected content
+
+            ngAfterViewInit
+                invokes after Component's View and all it's child views 
+                are fully initialized.
+
+                This hook is called during the first change detection
+                cycle, where angular initializes the view for the first time .
+
+            ngAfterViewChecked 
+                invokes after it checks and updates the component's 
+                views and child views. 
+
+                This hook is called after the ngAfterViewInit and after 
+                that during every change detection cycle.
+
+            ngOnDestroy
+                invokes just before the Component/ Directive instance 
+                is destroyed.
+
+                we can perform any cleanup logic for the component here.
+            
+            How to use Life Cycle Hooks : 
+
+                1. Import Hook interfaces
+                2. Declare that Component / directive implements
+                    lifecycle hook interface
+                3. Create the hook method
+
+
+
+
+     ***   Custom Directive : - Component Life Cycle Hooks 
+             @Directive 
+             We can create directive using the @Directive Decorator.
+             cmd#  ng generate directive directive_name
+
+                    ng g d directive_name
+
+
+Component to Component communication
+
+In Angular we can communicate between components by 6 ways : 
+    1. Using the @Input Decorator to define input properties and 
+        pass data from a parent to child.
+    2. Using the @Output Decorator to define output properties and 
+        send a response from a child to its parent.
+    3. Using the @ViewChild or @ViewChildren Decorator to set or read 
+        properties of a child component from within its parent.
+    4. Using a service as an intermediary to communicate between
+        unrelated components across the application.
+
+    5. Using route parameters to pass data from the current to the 
+        next routed component.
+
+    6. Using NgRx's store as the single source to create or read 
+        application state from within unrelated components across
+        the application.
+
+    1. Parent to Child 
+        The Parent Component can communicate with the child component
+        by setting its property. To do that the child component must 
+        expose its properties to the parent component.
+        The Child Component does this by using the @Input Decorator
+
+            Step1 : 
+                in the Child Component
+                1. Import the @Input module from @angular/Core library
+                2. Mark those property, which we need data from the 
+                parent as input property using @Input Decorator.
+            Step 2 : 
+                In the Parent Component 
+                1. Bind the Child Component Property in the parent
+                    component when instantiating the Child.
+    2. Child to Parent 
+        There are 3 ways in which the parent component can interact
+        with the child component
+
+            1. Listens to Child Event 
+            2. Uses Local variable to access the child 
+            3. Uses a @ViewChild to get the reference to the 
+                child component.
+
+        Parent Listens to Child Event : 
+            The Child Component exposes an EventEmitter Property.
+            This property is adorned with the @Output decorator.
+            When Child component needs to communicate with the 
+            parent it raises the event. 
+
+            The Parent Component listens to the event and reacts to it.
+
+            Event Emitter : 
+
+                To Raise an event, the component must declare an 
+                EventEmitter property. 
+                The Event can be emitted by calling the .emit() method.
+
+            @Output Decorator : 
+                Using the Event Emitter property gives the component 
+                ability to raise an Event. To make that event accessible
+                from parent component, we must use the property with 
+                @Output Decorator.
+
+
+            How to Pass data to Parent Component using @Output: 
+                Step1 : 
+                    in the child component 
+                        1. Declare a property of type EventEmitter
+                            and instantiate it 
+                        2. Mark it with a @Output Decorator
+                        3. Raise the event passing it with the desired 
+                            data.
+                Step 2 : 
+                    in the Parent component 
+                        1. Bind to the Child Component using Event 
+                            Binding and listen to the child events 
+                        2. Define the event handler function  
+
+Modules in Angular : 
+    Module in Angular is a collection of all components, modules, Providers,
+    and will maintain in a app.module.ts for every application.
+
+    we can create custom modules as per the implementation.
+
+    module uses @NgModule Decorator to list out all the dependencies
+    related to that Module.
+
+    @NgModule : Decorator that marks a class as an NgModule and supplies 
+    configuration metadata.
+
+    declarations : The set of components, directives, and pipes (declarables) 
+    that belong to this module.
+
+    imports : The set of NgModules whose exported declarables are available 
+    to templates in this module.
+
+    providers : The set of injectable objects that are available in the injector 
+    of this module.
+
+    bootstrap : The set of components that are bootstrapped when this module is bootstrapped. 
+    The components listed here are automatically added to entryComponents.
+
+    exports : The set of components, directives, and pipes declared in this NgModule that can be 
+    used in the template of any component that is part of an NgModule that imports this 
+    NgModule. Exported declarations are the module's public API.
+
+    schemas : The set of schemas that declare elements to be allowed in the NgModule. 
+    Elements and properties that are neither Angular components nor directives must be 
+    declared in a schema.
+
+    Allowed value are NO_ERRORS_SCHEMA and CUSTOM_ELEMENTS_SCHEMA.
+
+Forms in Angular : 
+    We can implement Forms in Angular by using FormsModule.
+    FormsModule provides the built-in validators to validate the inputs.
+
+    Angular takes two approaches to build the forms. 
+        - Template-driven forms 
+        - Reactive forms 
+
+    Two-way Data Binding : 
+        Two-way Data Binding means that the changes made to our model in the 
+        component are propagated to the view and that any changes made in 
+        the view are immediately updated in the underlying component data.
+
+        The Two-way Data Binding is nothing but both property binding and 
+        event binding applied togethar.
+
+        To implement NgModel in Forms, we need to import FormsModule in the 
+        angular.module 
+
+        NgModel is the built-in directive and is part of FormsModule.
+
+        The Two-way binding uses the syntax [()]
+
+    <input type="text" name="name" [(ngModel)] = "userName">
+    <p>{{userName}}</p>
+
+    Template-driven Forms : 
+
+        This is the simplest way to implement Forms in Angular.
+
+        Steps to implement TD Forms : 
+            1. The form is set up using ngForm directive.
+            2. controls are set up using the ngModel directive.
+            3. Validations are configured in the template using Directives
+
+        ngForm does the following : 
+            1. Binds itself to the <Form> directive
+            2. creates a top-level FormGroup instance 
+            3. Creates FormControl instance for each of the child control 
+                which has ngModel directive
+            4. creates FormGroup instance for each of the NgModelGroup
+                directive.
+
+
+        FormControl : is the basic building block of angular forms 
+        and represents a single input field in an Angular form.
+
+        submit a form : 
+            we use ngSubmit event, to submit the form data to the component
+            class.
+Reactive - Forms : 
+    Reactive forms (model - driven forms) 
+    To implement reactive forms, we need to import ReactiveFormsModule
+
+        FormGroup
+        FormControls
+        FormArrays 
+
+    Steps : 
+        1. import ReactiveFormsModule 
+        2. Create Form Model in component class using FormGroup
+            FormControl and FormArrays
+        3. Create the HTML Form Resembling the Form Model 
+        4. Bind the HTML Form to the Form Model
+
+
+Pipes : 
+    Angular Pipes takes the data as input and formats or transforms the data to display in the 
+    template.
+    We use them to change the appearance of the data before presenting.
+
+    Built-in Pipes :    
+        currency pipe
+        date pipe 
+        number pipe 
+        percent pipe 
+        decimal pipe 
+        slice pipe 
+
+    Syntax : expression | pipeOperator [:pipeArguments]
+
+    Custom pipe : 
+
+     ng generate pipe pipe_name
+
+    
+    Services : 
+     Services allows to create reusable code and use it for the component
+     that needs it.
+     The Services can be injected into components and other services using 
+     Dependency Injection system.
+     
+     The dependencies are declared in the Module using the Provider's Metadata.
+
+     ** The Angular creates a tree of injectors & Providers that resembles 
+     the component tree. This is called the hierarchical pattern.
+
+     ** Dependency Injection (DI) is technique in which a class recieves its 
+     dependencies from external sources rather than creating them itself.
+
+     creating a service : 
+        ng genarate service service_name
+        ng g s sname
+
+    ** @Inject is a constructor parameter decorator, which tells angular
+    to inject the parameter with the dependency provided in the given token.
+
+    It is the manual way of injecting the dependency.
+
+    The Angular Injector is responsible for instantiating the dependency and 
+    injecting it into the component or service.
+    
+
+

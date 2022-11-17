@@ -1,0 +1,49 @@
+<p>second works!</p>
+<p>Template Driven Form</p>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <p>
+        <label for="firstName">FirstName</label>
+        <input type="text"  name="firstName" formControlName="firstName" >
+    </p>
+    <p>
+        <label for="lastName">LastName</label>
+        <input type="text"  name="lastName" formControlName="lastName">
+    </p>
+    <p>
+        <label for="email">Email</label>
+        <input type="text"  name="email" formControlName="email">
+    </p>
+    <p>
+        <label for="gender">Gender</label>
+        <input type="radio" value="male" name="gender" formControlName="gender">Male 
+        <input type="radio" value="female" name="gender" formControlName="gender">Female
+    </p>
+    <p>
+        <label for="isMarried">Married</label>
+        <input type="checkbox" name="isMarried" formControlName="isMarried">
+    </p>
+    <div formGroupName = "address">
+        <p>
+            <label for="city">City</label>
+            <input type="text" name="city" formControlName="city">
+        </p>
+        <p>
+            <label for="state">State</label>
+            <input type="text" name="state" formControlName="state">
+        </p>
+        <p>
+            <label for="pincode">Pincode</label>
+            <input type="text" name="pincode" formControlName="pincode">
+        </p>
+    </div>
+    <select name="country" formControlName="country" >
+        <option *ngFor="let c of countryList" [ngValue]="c.name" >
+            {{c.name}}
+        </option>
+    </select>
+    
+    <p>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </p>
+</form>
+
