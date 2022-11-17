@@ -1,0 +1,92 @@
+<div class="register-form">
+    <h1 appHighLight>Registration Form</h1>
+    <form class="col-md-6" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label> Full Name</label>
+            <input type="text" 
+            class="form-control"
+            formControlName = "fullName"
+            [ngClass]="{'is-invalid' : submitted && f['fullName'].errors }"
+            />
+            <div *ngIf="submitted && f['fullName'].errors" class="invalid-feedback">
+                <div *ngIf="f['fullName'].errors['required']">Full Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label> User Name</label>
+            <input type="text" 
+            class="form-control"
+            formControlName = "userName"
+            [ngClass]="{'is-invalid' : submitted && f['userName'].errors }"
+            />
+            <div *ngIf="submitted && f['userName'].errors" class="invalid-feedback">
+                <div *ngIf="f['userName'].errors['required']">User Name is required</div>
+                <div *ngIf="f['userName'].errors['minlength']">
+                    User Name must be at least 6 charcters
+                </div>
+                <div *ngIf="f['userName'].errors['maxlength']">
+                    User Name must be at least 20 charcters
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label> Email </label>
+            <input type="text" 
+            class="form-control"
+            formControlName = "email"
+            [ngClass]="{'is-invalid' : submitted && f['email'].errors }"
+            />
+            <div *ngIf = "submitted && f['email'].errors" class="invalid-feedback">
+                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                <div *ngIf="f['email'].errors['email']">Email is Invalid</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label> Password</label>
+            <input type="text" 
+            class="form-control"
+            formControlName = "password"
+            [ngClass]="{'is-invalid' : submitted && f['password'].errors }"
+            />
+            <div *ngIf = "submitted && f['password'].errors" class="invalid-feedback">
+                <div *ngIf="f['password'].errors['required']">Password is required</div>
+                <div *ngIf="f['password'].errors['minlength']">
+                    Password should be atleast 6 characters</div>
+                <div *ngIf="f['password'].errors['maxlength']">
+                    Password must not exceed 40 characters 
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label> Confirm Password</label>
+            <input type="text" 
+            class="form-control"
+            formControlName = "confirmPassword"
+            [ngClass]="{'is-invalid' : submitted && f['confirmPassword'].errors }"
+            />
+            <div *ngIf = "submitted && f['confirmPassword'].errors" class="invalid-feedback">
+                <div *ngIf="f['confirmPassword'].errors['required']">Confirm Password is required</div>
+                <div *ngIf="f['confirmPassword'].errors['matching']">
+                    Confirm password doesnot match with password
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" 
+            class="form-check-input"
+            formControlName="acceptTerms"
+            [ngClass]="{'is-invalid' : submitted && f['acceptTerms'].errors }"
+            />
+            <label class="form-check-label">
+                Accepted Terms and Conditions 
+            </label>
+            <div *ngIf = "submitted && f['acceptTerms'].errors" class="invalid-feedback">
+                AcceptTerms is required
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Register</button>
+            <button class="btn btn-warning float-right"(click)="onReset()">Reset</button>
+        </div>
+    </form>
+</div>
