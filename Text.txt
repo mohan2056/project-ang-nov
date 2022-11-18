@@ -1306,6 +1306,84 @@ Pipes :
 
     The Angular Injector is responsible for instantiating the dependency and 
     injecting it into the component or service.
+
+Observables :
+
+    Rx Js - Reactive Programming.
+    it is defined as programming with asynchronous data streams.
+
+    Data stream : A Stream is a data, which arrives over a period 
+    of time. The Stream of data can be anything like variables, 
+    user inputs, properties, caches, data structures etc.,
+
+    The Stream may complete when user closes the app or window.
+
+    At any point of time the stream may emit any of the following
+    Value : next Value in the stream
+    Complete : The Stream has ended 
+    Error : The error has stopped the stream.
+
+    The Reactive programming is all about creating the stream, emitting 
+    value, error or complete signals, manipulate, transfer or 
+    do something useful with the data streams.
+
+    RxJS - Reactive Extensions library for Javascript
+    is a Javascript library that allows to work with asynchronous
+    data streams.
+
+    The Angualr Uses the RxJS library in its framework to implement
+    Reactive Programming.
+
+    The RxJS has 2 main players : 
+        1. Observable 
+        2. Observers (Subscribers)
+
+    Observable is a function that converts the ordinary stream of data 
+    into an observable stream of data.
+    Observables are declarative. The Observables starts to emit 
+    values only when someone subscribes to it.
+
+    Observers: The Observers communicate with the Observable using 
+    callbacks.
+    The Observer must subscribe with the observable to recieve the 
+    value from observable. while subscribing it optionally passes 
+    3 callbacks : 
+        next()
+        error()
+        complete()
+
+    There are many ways to create an Observable :
+        - Observable Constructor
+        - create
+        - defer
+        - empty 
+        - from 
+        - fromEvent 
+        - interval 
+        - of
+        - range 
+        - throw 
+        - timer 
+
+
+    HTTP Client Module : 
+
+    HTTP Client makes use of RxJS Observables and the response from the 
+    HTTP Client is Observable, hence it needs to be subscribed.
+
+    HttpClient is a separate module in angular and is available under 
+    '@angular/common/http' 
+
+    import {HttpClientModule} from '@angular/common/http';
+
+    imports: [
+    HttpClientModule
+    ],
+
+    Import HttpClient in services from '@angular/common/http' 
+
+    Inject HttpClient service in the constructor
+
     
 
 
