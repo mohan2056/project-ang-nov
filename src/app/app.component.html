@@ -1,34 +1,42 @@
-<div>
-  <h1>Project Sample</h1>
-  <p>{{todayDate | date : "short"}}</p>
-  <p>{{todayDate | date : "long"}}</p>
-  <p>{{todayDate | date}}</p>
-  <p>{{userName | uppercase}}</p>
-  <p>{{userName | lowercase}}</p>
-  <p>{{salary | currency : "INR"}}</p>
-  <p>{{todayDate | date | uppercase}}</p>
-  <p>{{userName | slice : 0 :6}}</p>
-  <ul *ngIf="posts.length > 0">
-    <li *ngFor="let post of posts">
-      {{post.title | uppercase}}
-    </li>
-  </ul>
-  <app-reactive-form></app-reactive-form>
-  <!-- <app-first></app-first> -->
-  <!-- <app-second></app-second> -->
-  <!-- <ul>
-    <li *ngFor="let student of students">
-      {{student.name}} && {{student.course}}
-    </li>
-  </ul>
- <div [ngSwitch]="num">
-  <div *ngSwitchCase="1">One</div>
-  <div *ngSwitchCase="2">Two</div>
-  <div *ngSwitchCase="3">Three</div>
-  <div *ngSwitchCase="4">Four</div>
-  <div *ngSwitchCase="5">Five</div>
-  <div *ngSwitchCase="6">Six</div>
-  <div *ngSwitchDefault>This is Default</div>
- </div> 
- <app-second></app-second> -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Project Sample</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">Sample App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" [routerLink]="'first'">First</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="'second'" >Second</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="'products'">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Loading ...</p>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
 </div>

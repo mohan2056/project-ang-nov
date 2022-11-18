@@ -1385,5 +1385,91 @@ Observables :
     Inject HttpClient service in the constructor
 
     
+    Routing : 
+        Routing allows to move from one part of application to another part or one 
+        view to another view.
+
+        The Router is a separate module in Angular. (@angular/router)
+
+        The Router Module provides the necessary service providers and 
+        directives for navigating through application views 
+
+        Using Angular Router : 
+            . navigating from one to another 
+            . Pass optional  parameters to the view 
+            . Bind the clickable events to the view and load the view when the user 
+                performs application tasks.
+            . Handles back and forward buttons of the browser
+            . Allows to dynamically load the view
+            . protects the routes from unauthorized users using Gaurds.
+
+        Components of Angular Router Module : 
+            Router 
+                The Angular Router is an object that enables navigation from 
+                component to component as users perform application tasks 
+                like clicking on menu/nav  links, buttons.
+                We can access the router object and use its methods like 
+                navigate() or navigateByUrl(), to navigate to a route. 
+
+            Route 
+                Route tells the Angular Router which view to display when 
+                a user clicks a link or pastes a URL into browser address.
+                Every Route consits of a path and component it is mapped to.
+                The Router object parses and builds the final URL using the 
+                Route.
+
+            Routes 
+                Routes is an array of Route Objects. 
+
+            RouterOutlet 
+                RouterOutlet is a directive (<router-outlet></router-outlet>)
+                that serves as a placeholder where the Router should display 
+                the view.
+
+            RouterLink 
+                The RouteLink is a directive that Binds the HTML element to 
+                a Route. Clicking on the HTML Element, which is bound to a 
+                RouterLink, will result in navigation to the Route.
+                The RouterLink may contain parameters to be passed to the 
+                route's component.
+
+            RouterLinkActive 
+                RouterLinkActive is a directive for adding or removing classes 
+                from an HTML element that is bound to a RouterLink.
+
+            RouterState 
+                The current state of the router including a tree of the 
+                currently activated routes togethar with convenience 
+                methods for traversing the route tree.
+
+            ActivatedRoute
+                The ActivatedRoute is an object that represents the 
+                currently activated route associated with the loaded 
+                component.
+
+            RouteLink Parameters Array 
+                The Parameters or arguments to the Route. it is an array which we 
+                can bind the RouterLink directive or pass it as an argument to 
+                the Router.navigate method
+
+            Steps to Configure Angular Routing :
+                To Configure the Router in Angular, we need to follow these steps : 
+                . Set the <base href> in index.html 
+                . Define routes for the view 
+                . Register the Router Service with Routes 
+                . Map HTML Element actions to Route 
+                . Choose where we want to display the view 
+
+            
+            Location Stratagies : 
+                Angular supports 2 location Stratagies : 
+                    1. Hash Location Strategy 
+                        http://localhost:4200/#/first 
+                    2. Path Location Strategy 
+                        http://localhost:4200/first 
+
+            Passing parameters to the Route : 
+                
+
 
 
