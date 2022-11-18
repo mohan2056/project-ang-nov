@@ -1,0 +1,7 @@
+<p>product works!</p>
+<div>
+    <p *ngFor="let product of products">
+        <span>{{product.pName}}</span>
+        <button [routerLink]="['/products',product.id]">Click me</button>
+    </p>
+</div>

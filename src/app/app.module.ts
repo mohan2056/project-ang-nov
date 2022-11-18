@@ -16,6 +16,9 @@ import { Parent1Component } from './parent1/parent1.component';
 import { SamplePipe } from './sample.pipe';
 import { ProductService } from './product.service';
 import {HttpClientModule} from '@angular/common/http';
+import { ErrorComponent } from './error/error.component';
+import { ProductComponent } from './product/product.component';
+import { ProductdetailComponent } from './productdetail/productdetail.component';
 
 
 @NgModule({
@@ -30,7 +33,10 @@ import {HttpClientModule} from '@angular/common/http';
     Child1Component,
     Parent1Component,
     SamplePipe,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ErrorComponent,
+    ProductComponent,
+    ProductdetailComponent
   ],
   imports: [
     BrowserModule,

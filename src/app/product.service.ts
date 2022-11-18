@@ -37,6 +37,10 @@ export class ProductService {
     return this.products;
   }
   
+  public getProduct(id: number){
+    return this.products.find(p => p.id == id);
+  }
+
   // public getPosts(){
   //     this.http.get<any[]>('https://jsonplaceholder.typicode.com/posts')
   //     .subscribe(data => {
