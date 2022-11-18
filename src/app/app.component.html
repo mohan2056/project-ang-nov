@@ -8,9 +8,9 @@
   <p>{{salary | currency : "INR"}}</p>
   <p>{{todayDate | date | uppercase}}</p>
   <p>{{userName | slice : 0 :6}}</p>
-  <ul>
-    <li *ngFor="let product of products">
-      {{product.pName | uppercase}}
+  <ul *ngIf="posts.length > 0">
+    <li *ngFor="let post of posts">
+      {{post.title | uppercase}}
     </li>
   </ul>
   <app-reactive-form></app-reactive-form>

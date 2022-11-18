@@ -1,5 +1,7 @@
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Product } from './product.interface';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -27,9 +29,26 @@ export class ProductService {
     }
   ];
 
-  constructor() { }
+  posts : any[] = [];
+
+  constructor(public http : HttpClient) { }
 
   public getProducts(){
     return this.products;
   }
+  
+  // public getPosts(){
+  //     this.http.get<any[]>('https://jsonplaceholder.typicode.com/posts')
+  //     .subscribe(data => {
+  //       this.posts = data;
+  //       console.log(this.posts);
+  //     },
+  //     err => console.log(err)
+  //     );
+  // }
+
+  public getPosts(): Observable<any>{
+    return this.http.get('https://jsonplaceholder.typicode.com/posts');
+  }
+  
 }
